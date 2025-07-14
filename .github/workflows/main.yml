@@ -23,15 +23,15 @@ jobs:
 
       - name: Install newman and html-extra globally
         run: |
-             npm install -g newman 
-             npm install -g newman-reporter-html
+          npm install -g newman 
+          npm install -g newman-reporter-htmlextra
 
       - name: Run the postman collection with Newman
         run: |
-            newman run "In-Warranty-flow Collection Final using csvdata.postman_collection" \
-            -e QA.postman_environment.json \
-            -d testdata.csv \
-            -r cli,htmlextra
+          newman run "In-Warranty-flow Collection Final using csvdata.postman_collection" \
+          -e QA.postman_environment.json \
+          -d testdata.csv \
+          -r cli,htmlextra
 
                   
       
