@@ -5,8 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron : 30 02 * * * # 8 am IST Every Day
-    - cron : 00 14 * * * # 7:30 pm IST Every Day
+    - cron: '30 2 * * 0'
 
 jobs:
   run-postman-tests:
@@ -30,7 +29,8 @@ jobs:
         run: |
           newman run "In-Warranty-flow Collection Final using csvdata.postman_collection.json" \
           -e QA.postman_environment.json \
-          -r cli,htmlextra
+          -r cli,htmlextra \
+          --reporter-htmlextra-export ./newman/index.html
 
       - name: Upload a Build Artifact    
         if : always()
