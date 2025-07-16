@@ -16,7 +16,6 @@ My name is Boidik Das. I have 3.6 years of experience in Automation,manual and A
 4. Data Driven testing with CSV
 5. Schema Validation
 6. Secrets management with Github Secrets
-7. 
 ## Tech Stack ##
 1. Postman
 2. Nodejs 22v
